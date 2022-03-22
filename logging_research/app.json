@@ -1,4 +1,4 @@
 {
   "name": "logging-research",
-  "logging_format": "%(asctime)s-%(process)d-%(module)s-%(filename)s$%(funcName)s:%(lineno)d-%(levelname)s-%(message)s"
+  "logging_format": "%(asctime)s-%(process)d-%(levelname)s-%(module)s-%(filename)s$%(funcName)s:%(lineno)d-%(message)s"
 }
