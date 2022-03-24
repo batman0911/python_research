@@ -12,7 +12,7 @@ def config():
 
     # Create custom logger logging all five levels
     logger = logging.getLogger()
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.INFO)
 
     # Create stdout handler for logging to the console (logs all five levels)
     stdout_handler = logging.StreamHandler()
@@ -21,7 +21,7 @@ def config():
 
     # Create file handler for logging to a file (logs all five levels)
     today = datetime.date.today()
-    file_handler = logging.FileHandler('logs/my_app_{}.log'.format(today.strftime('%Y_%m_%d')))
+    file_handler = logging.FileHandler('logs/app_{}.log'.format(today.strftime('%Y_%m_%d')))
     file_handler.setLevel(logging.DEBUG)
     file_handler.setFormatter(logging.Formatter(fmt))
 
