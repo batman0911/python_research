@@ -4,13 +4,15 @@ from common.config_loader import Config
 from common.Singleton import Singleton
 
 
+conf = Config().conf()
+
+
 class KafkaProducer(metaclass=Singleton):
     __producer = Producer({'bootstrap.servers': 'localhost:9092'})
 
     def __init__(self):
         """load config from app.yml and init kafka producer"""
-        conf = Config().conf()
-        bootstrap_server = conf.get("kafka").get("bootstrap-servers")
+        bootstrap_server = conf.get("kafka").get("bootstrap.servers")
         print(f'start init kafka server: {bootstrap_server}')
         self.__producer = Producer({'bootstrap.servers': bootstrap_server})
 
