@@ -33,6 +33,7 @@ if __name__ == '__main__':
     producer = KafkaProducer().producer()
     for i in range(10):
         msg = f"message {i}"
-        producer.produce("python-kafka", key="my_name", value=msg, callback=delivery_report)
+        key = f'key_{i}'
+        producer.produce("python-kafka", key=key, value=msg, callback=delivery_report)
 
     producer.flush()

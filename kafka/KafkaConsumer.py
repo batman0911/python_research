@@ -40,7 +40,7 @@ if __name__ == '__main__':
             print(f'consumer error: {msg.error()}')
             continue
 
-        print(f'receive message: {msg.value().decode("utf-8")}')
+        print(f'receive message, key: {msg.key().decode("utf-8")}, value: {msg.value().decode("utf-8")}')
 
     consumer.close()
 
