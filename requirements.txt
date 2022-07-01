@@ -8,3 +8,4 @@ typing_extensions==4.1.1
 wrapt==1.14.0
 
 PyYAML~=6.0
+matplotlib~=3.5.2
